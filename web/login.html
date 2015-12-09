@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>Log In</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/login.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="header" class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Gogether</a>
+            </div>
+            <ul class="nav navbar-nav pull-right">
+                <li>
+                    <a href="#">
+                        <span>Welcome to Gogether!</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="wrapper">
+            <div id="login-form">
+                <!-- <div th:if="${param.error}">
+                    <p align="center">Invalid username and password.</p>
+                </div>
+                <div th:if="${param.logout}" >
+                    <p align="center">You have been logged out.</p>
+                </div> -->
+                <br/>
+                <form class="form-horizontal" th:action="@{/login}" method="post">
+                    <div class="form-group">
+                        <label for="username" class="col-md-offset-2 col-md-3 control-label">Username</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="username" placeholder="Username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-md-offset-2 col-md-3 control-label">Password</label>
+                        <div class="col-md-4">
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-4 col-md-4">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"></input> Remember me
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="col-md-offset-4 col-md-4">
+                    <button class="btn btn-primary" id="submit-button">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

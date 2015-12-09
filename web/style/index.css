@@ -1,0 +1,128 @@
+body {
+    padding-top: 50px;
+    overflow: hidden;
+}
+#wrapper {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    display: inline-block;
+}
+#main-wrapper {
+    height: 100%;
+    overflow-y: auto;
+    padding: 50px 0px 0px 0px;
+}
+#map-wrapper {
+    height: 100%;
+    overflow-y: auto;
+}
+#map-canvas {
+    height: 100%;
+}
+#comment-wrapper {
+    height: 30%;
+    overflow-y: auto;
+    border-top: 2px solid #D3D3D3;
+}
+#header {
+    font-size: 18px;
+}
+#sidebar-wrapper {
+    height: 100%;
+    padding: 50px 0px 0px 0px;
+    position: fixed;
+    border-right: 2px solid #D3D3D3;
+}
+.events-wrapper {
+    height: 100%;
+    padding: 50px 0px 0px 0px;
+    border-right: 2px solid #D3D3D3;
+    position: relative;
+    overflow-y: auto;
+}
+#sidebar-create {
+    height: 100%;
+    position: relative;
+    padding: 0px 20px 20px 20px;
+    overflow-y: auto;
+    background-color: #f6f6f6;
+}
+#sidebar-search {
+    position: relative;
+    padding: 0px 20px 20px 20px;
+    overflow-y: auto;
+    background-color: #f6f6f6;
+    border-bottom: 2px solid #D3D3D3;
+}
+#sidebar {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+}
+#sidebar .list-group-item {
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+}
+@media (max-width: 992px) {
+    body {
+        padding-top: 0px;
+    }
+}
+@media (min-width: 992px) {
+    #main-wrapper {
+        float:right;
+    }
+}
+@media (max-width: 992px) {
+    #main-wrapper {
+        padding-top: 0px;
+    }
+}
+@media (max-width: 992px) {
+    #sidebar-wrapper {
+        position: static;
+        height:auto;
+        max-height: 300px;
+  		border-right:0;
+	}
+}
+
+label {
+    font-size: 16px;
+    padding: 5px 0px 5px 0px;
+}
+
+#description {
+    word-break: break-word;
+    width: 100%;
+    height: 120px;
+    resize: none;
+}
+
+#infobox {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0px 0px 0px;
+}
+
+.events-list-item {
+    text-align: center;
+    padding: 1px;
+    border: 1px solid #D3D3D3;
+}
+
+.event-title {
+    font-size: 16px;
+    padding: 2px 0px 2px 0px;
+}
+
+#login-form {
+    align-items: center;
+    padding: 120px 100px 100px 0px;
+}

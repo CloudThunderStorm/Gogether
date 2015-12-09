@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Gogether</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style/index.css">
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/index.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div id="header" class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Gogether</a>
+			</div>
+			<nav class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="index.html">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+							<span>Find</span>
+						</a>
+					</li>
+					<li>
+						<a href="create.html">
+							<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+							<span>Create</span>
+						</a>
+					</li>
+					<li>
+						<a href="myevents.html">
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+							<span>My Events</span>
+						</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav pull-right">
+					<li>
+						<a href="login.html">
+							<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+							<span>Log Out<span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div id="wrapper">
+			<div id="sidebar-wrapper" class="col-md-3">
+				<div id="sidebar-search">
+					<label for="category-select">Category</label>
+					<select class="form-control" id="category-select">
+						<option value="-1">All</option>
+						<option value="entertainment">Entertainment</option>
+						<option value="food">Food</option>
+						<option value="sports">Sports</option>
+						<option value="tech">Tech</option>
+						<option value="charity">Charity</option>
+					</select>
+					<!-- <label for="zipcode">Zipcode</label>
+					<input type="text" pattern="[0-9]{5}" class="form-control" id="zipcode" placeholder="Zipcode"> -->
+					<label for="time-select">Time</label>
+					<select class="form-control" id="time-select">
+						<option value="-1">All</option>
+						<option value="180">In 3 Hours</option>
+						<option value="720">In 12 Hours</option>
+						<option value="1440">In a day</option>
+						<option value="4320">In 3 day</option>
+						<option value="10080">In a week</option>
+					</select>
+					<br/>
+					<div align="center">
+						<button class="btn btn-default" id="search-button">Search</button>
+					</div>
+				</div>
+				<div id="sidebar">
+				</div>
+			</div>
+			<div id="main-wrapper" class="col-md-9 pull-right">
+				<div id="map-wrapper">
+					<div id="map-canvas"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
