@@ -1,0 +1,77 @@
+{%- extends "base.html" -%}
+{%- block title -%}
+Create Page
+{%- endblock title -%}
+
+{%- block headcontent -%}
+{%- endblock headcontent -%}
+
+{%- block navbar -%}
+{%- include "nav.html" -%}
+{%- endblock -%}
+
+{%- block bodycontent -%}
+<div id="wrapper">
+    <div id="sidebar-wrapper" class="col-md-3">
+        <div id="sidebar-create">
+            <form action="#" method="post" id="event-form" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input name="title" id="title" class="form-control"></input>
+                </div>
+
+                <div class="form-group">
+                    <label for="category-select">Category</label>
+                    <select class="form-control" id="category-select">
+                        <option value="entertainment">Entertainment</option>
+                        <option value="food">Food</option>
+                        <option value="sports">Sports</option>
+                        <option value="tech">Tech</option>
+                        <option value="charity">Charity</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="datetimepicker1">Start Time</label>
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="datetimepicker1">End Time</label>
+                    <div class='input-group date' id='datetimepicker2'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </form>
+            <br/>
+            <div align="center">
+                <button class="btn btn-primary" id="location-button">Set Location</button>
+                <button class="btn btn-default" id="submit-button">Submit</button>
+            </div>
+            <div id="infobox"></div>
+        </div>
+    </div>
+    <div id="main-wrapper" class="col-md-9 pull-right">
+        <div id="map-wrapper">
+            <div id="map-canvas"></div>
+        </div>
+    </div>
+</div>
+{%- endblock bodycontent -%}
+
+{%- block scripts -%}
+<script src="{{ url_for('.static', filename='js/create.js') }}"></script>
+{%- endblock scripts -%}

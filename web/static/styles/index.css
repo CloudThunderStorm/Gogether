@@ -2,6 +2,11 @@ body {
     padding-top: 50px;
     overflow: hidden;
 }
+
+h1 {
+    text-align: center;
+}
+
 #wrapper {
     min-height: 100%;
     height: 100%;
@@ -122,7 +127,24 @@ label {
     padding: 2px 0px 2px 0px;
 }
 
-#login-form {
-    align-items: center;
-    padding: 120px 100px 100px 0px;
+.log-in-sign-up-wrapper {
+    height: 100%;
+    padding: 150px 0px 0px 0px;
+    border: 1px solid #D3D3D3;
+    position: relative;
+    overflow-y: auto;
+}
+
+.log-in-sign-up-form-group {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.list-title {
+    text-align: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    border-bottom: 2px solid #D3D3D3;
+    padding: 8px;
+    background-color: #f6f6f6;
 }

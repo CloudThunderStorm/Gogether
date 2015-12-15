@@ -1,0 +1,55 @@
+{%- extends "base.html" -%}
+{%- block title -%}
+Find Page
+{%- endblock title -%}
+
+{%- block headcontent -%}
+{%- endblock headcontent -%}
+
+{%- block navbar -%}
+{%- include "nav.html" -%}
+{%- endblock -%}
+
+{%- block bodycontent -%}
+<div id="wrapper">
+	<div id="sidebar-wrapper" class="col-md-3">
+		<div id="sidebar-search">
+			<label for="category-select">Category</label>
+			<select class="form-control" id="category-select">
+				<option value="-1">All</option>
+				<option value="entertainment">Entertainment</option>
+				<option value="food">Food</option>
+				<option value="sports">Sports</option>
+				<option value="tech">Tech</option>
+				<option value="charity">Charity</option>
+			</select>
+			<!-- <label for="zipcode">Zipcode</label>
+			<input type="text" pattern="[0-9]{5}" class="form-control" id="zipcode" placeholder="Zipcode"> -->
+			<label for="time-select">Time</label>
+			<select class="form-control" id="time-select">
+				<option value="-1">All</option>
+				<option value="180">In 3 Hours</option>
+				<option value="720">In 12 Hours</option>
+				<option value="1440">In a day</option>
+				<option value="4320">In 3 day</option>
+				<option value="10080">In a week</option>
+			</select>
+			<br/>
+			<div align="center">
+				<button class="btn btn-default" id="search-button">Search</button>
+			</div>
+		</div>
+		<div id="sidebar">
+		</div>
+	</div>
+	<div id="main-wrapper" class="col-md-9 pull-right">
+		<div id="map-wrapper">
+			<div id="map-canvas"></div>
+		</div>
+	</div>
+</div>
+{%- endblock bodycontent -%}
+
+{%- block scripts -%}
+<script src="{{ url_for('.static', filename='js/index.js') }}"></script>
+{%- endblock scripts -%}

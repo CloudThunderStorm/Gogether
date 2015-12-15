@@ -1,13 +1,14 @@
 $(document).ready(function() {
     (function() {
+        var serverUrl = "ec2-52-90-113-155.compute-1.amazonaws.com";
         var map;
         var eventsList = [];
         var ne;
         var sw;
 
         function initiate() {
-            if ($.cookie("username") == undefined) {
-                window.location="login.html";
+            if ($.cookie("username") == undefined || $.cookie("username") == "") {
+                window.location.href = Flask.url_for('loginsignup');;
             }
             username = $.cookie("username");
             getUserLocation();
@@ -25,7 +26,7 @@ $(document).ready(function() {
                     initMarker = new google.maps.Marker({
                         position: initialLocation,
                         map: map,
-                        icon: "icons/current_location.png"
+                        icon: "static/icons/current_location.png"
                     });
                     addChangeListener();
                 }, function() {
@@ -97,7 +98,7 @@ $(document).ready(function() {
             };
             $.ajax({
                 type: "GET",
-                url: "http://129.236.235.98:8080/searchEvent",
+                url: serverUrl + "/searchEvent",
                 data: queryData,
             }).done(function(data) {
                 eventsList = data;

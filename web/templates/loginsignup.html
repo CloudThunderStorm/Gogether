@@ -1,0 +1,55 @@
+{%- extends "base.html" -%}
+{%- block title -%}
+Login or Signup Page
+{%- endblock title -%}
+
+{%- block headcontent -%}
+{%- endblock headcontent -%}
+
+{%- block bodycontent -%}
+<div id="header" class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="#">Gogether</a>
+	</div>
+</div>
+<div id="wrapper">
+    <div class="log-in-sign-up-wrapper col-md-6">
+        <form>
+            <div class="form-group log-in-sign-up-form-group">
+                <label for="log-in-username">Username</label>
+                <input type="text" class="form-control" id="log-in-username" placeholder="Username">
+            </div>
+            <div class="form-group log-in-sign-up-form-group">
+                <label for="log-in-password">Password</label>
+                <input type="text" class="form-control" id="log-in-password" placeholder="Password">
+            </div>
+        </form>
+        <div class="form-group log-in-sign-up-form-group pull-right">
+            <button class="btn btn-primary" id="log-in-button">Log In</button>
+        </div>
+    </div>
+    <div class="log-in-sign-up-wrapper col-md-6">
+        <form>
+            <div class="form-group log-in-sign-up-form-group">
+                <label for="sign-up-username">Username</label>
+                <input type="text" class="form-control" id="sign-up-username" placeholder="Username">
+            </div>
+            <div class="form-group log-in-sign-up-form-group">
+                <label for="sign-up-password">Password</label>
+                <input type="text" class="form-control" id="sign-up-password" placeholder="Password">
+            </div>
+            <div class="form-group log-in-sign-up-form-group">
+                <label for="sign-up-re-password">Re-enter Password</label>
+                <input type="text" class="form-control" id="sign-up-re-password" placeholder="Password">
+            </div>
+        </form>
+        <div class="form-group log-in-sign-up-form-group pull-right">
+            <button class="btn btn-success" id="sign-up-button">Sign Up</button>
+        </div>
+    </div>
+</div>
+{%- endblock bodycontent -%}
+
+{%- block scripts -%}
+<script src="{{ url_for('static', filename='js/loginsignup.js') }}"></script>
+{%- endblock scripts -%}

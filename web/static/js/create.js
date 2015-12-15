@@ -1,5 +1,6 @@
 $(document).ready(function() {
     (function() {
+        var serverUrl = "ec2-52-90-113-155.compute-1.amazonaws.com";
         var map;
         var datetimepicker1 = $('#datetimepicker1');
         var datetimepicker2 = $('#datetimepicker2');
@@ -15,8 +16,8 @@ $(document).ready(function() {
         infobox = $('#infobox');
 
         function initiate() {
-            if ($.cookie("username") == undefined) {
-                window.location="login.html";
+            if ($.cookie("username") == undefined || $.cookie("username") == "") {
+                window.location.href = Flask.url_for('loginsignup');;
             }
             username = $.cookie("username");
             getUserLocation();
@@ -36,7 +37,7 @@ $(document).ready(function() {
                     initMarker = new google.maps.Marker({
                         position: initialLocation,
                         map: map,
-                        icon: "icons/current_location.png"
+                        icon: "static/icons/current_location.png"
                     });
                 }, function() {
                     handleNoGeolocation(browserSupportFlag);
@@ -100,7 +101,7 @@ $(document).ready(function() {
                 $.ajax({
                     type: "POST",
                     contentType: "application/json",
-                    url: "http://129.236.235.98:8080/addEvent",
+                    url: serverUrl + "/addEvent",
                     data: JSON.stringify(createData),
                     dataType: "json"
                 }).done(function(data) {
@@ -114,7 +115,7 @@ $(document).ready(function() {
                     } else {
                         swal({
                             title: "Failed",
-                            text: "Server is failed to create your eventm please try again later",
+                            text: "Server is failed to create your event please try again later",
                             type: "warning",
                             timer: 2000
                         });
