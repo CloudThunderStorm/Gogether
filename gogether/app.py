@@ -1,12 +1,15 @@
 from flask import Flask, request, abort, render_template, jsonify
 from flask_bootstrap import Bootstrap
 from flask_jsglue import JSGlue
+from flask.ext.cors import CORS
 
 import string, sys
 
 app = Flask(__name__)
+
 Bootstrap(app)
 JSGlue(app)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 @app.route('/')
 def index():

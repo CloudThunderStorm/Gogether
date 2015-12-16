@@ -1,6 +1,6 @@
 $(document).ready(function() {
     (function() {
-        var serverUrl = "ec2-52-90-113-155.compute-1.amazonaws.com";
+        var serverUrl = "http://ec2-52-90-113-155.compute-1.amazonaws.com:8080";
         var map;
         var eventsList = [];
         var ne;
@@ -39,7 +39,6 @@ $(document).ready(function() {
         }
 
         function handleNoGeolocation(errorFlag) {
-            console.log(1);
             if (errorFlag == true) {
                 alert("Geolocation service failed.");
                 initialLocation = newyork;
@@ -98,8 +97,10 @@ $(document).ready(function() {
             };
             $.ajax({
                 type: "GET",
+                crossDomain: true,
+                dataType: 'jsonp',
                 url: serverUrl + "/searchEvent",
-                data: queryData,
+                data: queryData
             }).done(function(data) {
                 eventsList = data;
                 generateView();

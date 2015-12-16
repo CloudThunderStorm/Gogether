@@ -15,6 +15,7 @@ h1 {
     top: 0px;
     left: 0;
     display: inline-block;
+    background-image: "{{ url_for('static', filename = 'icons/login_background.jpg') }}";
 }
 #main-wrapper {
     height: 100%;
@@ -130,7 +131,6 @@ label {
 .log-in-sign-up-wrapper {
     height: 100%;
     padding: 150px 0px 0px 0px;
-    border: 1px solid #D3D3D3;
     position: relative;
     overflow-y: auto;
 }

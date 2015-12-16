@@ -1,6 +1,6 @@
 $(document).ready(function() {
     (function() {
-        var serverUrl = "ec2-52-90-113-155.compute-1.amazonaws.com";
+        var serverUrl = "http://ec2-52-90-113-155.compute-1.amazonaws.com:8080";
         var map;
         var datetimepicker1 = $('#datetimepicker1');
         var datetimepicker2 = $('#datetimepicker2');
@@ -164,6 +164,5 @@ $(document).ready(function() {
             }
             return true;
         }
-
     })();
 });

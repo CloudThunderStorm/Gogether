@@ -1,6 +1,6 @@
 $(document).ready(function() {
     (function() {
-        var serverUrl = "ec2-52-90-113-155.compute-1.amazonaws.com";
+        var serverUrl = "http://ec2-52-90-113-155.compute-1.amazonaws.com:8080";
         var map;
         var organizeList = [];
         var followList = [];
@@ -55,10 +55,12 @@ $(document).ready(function() {
             $.ajax({
                 type: "GET",
                 url: serverUrl + "/findOrganizedEvent",
-                data: queryData,
+                data: queryData
             }).done(function(data) {
                 organizeList = data;
                 generateOrganizeList();
+            }).fail(function() {
+                console.log(1);
             });
         }
 
