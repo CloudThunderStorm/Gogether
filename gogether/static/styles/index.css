@@ -20,14 +20,14 @@ color: #b48608; font-family: 'Droid serif', serif; font-size: 36px; font-weight:
 #event-outter-wrapper {
     height: 100%;
     position: relative;
-    padding: 50px 200px 0px 200px;
+    padding: 50px 150px 0px 150px;
     overflow-y: auto;
     background-color: #f6f6f6;
 }
 
 #event-inner-wrapper {
     height: 100%;
-    padding: 50px 0px 0px 0px;
+    padding-top: 50px;
     position: relative;
     overflow-y: auto;
     background-color: #F0F0F0;
@@ -58,6 +58,7 @@ color: #b48608; font-family: 'Droid serif', serif; font-size: 36px; font-weight:
 #sidebar-wrapper {
     height: 100%;
     padding: 50px 0px 0px 0px;
+    align-items: center;
     position: fixed;
     border-right: 2px solid #D3D3D3;
 }
@@ -165,4 +166,66 @@ label {
     border-bottom: 2px solid #D3D3D3;
     padding: 8px;
     background-color: #f6f6f6;
+}
+
+/*Social Bar*/
+.facebook-share {
+    background-color: #3B5998;
+}
+
+.twitter-share {
+    background-color: #55ACEE;
+}
+
+.googleplus-share {
+    background-color: #DD4B39;
+}
+
+.email-share {
+    background-color: #888888;
+}
+
+.pinterest-share {
+    background-color: #CC2127;
+}
+
+.reddit-share {
+    background-color: #5F99CF;
+}
+
+.tumblr-share {
+    background-color: #35465C;
+}
+
+.whatsapp-share {
+    background-color: #4DC247;
+}
+
+#socialbar-container-desktop {
+    text-align: center;
+    font-size: 16px;
+    align-items: center;
+}
+
+#socialbar-desktop {
+    margin: 0 auto;
+    display: table;
+    width: 100%;
+    list-style: none;
+    align-items: center;
+}
+
+#socialbar-desktop li {
+    margin: 0 auto;
+    display: inline-block;
+    width: 16.6%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 21px;
+}
+
+.social-button {
+    color: #FFFFFF;
+    opacity: 0.8;
+    width: 100%;
 }

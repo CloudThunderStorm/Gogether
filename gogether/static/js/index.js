@@ -8,7 +8,7 @@ $(document).ready(function() {
 
         function initiate() {
             if ($.cookie("username") == undefined || $.cookie("username") == "") {
-                window.location.href = Flask.url_for('loginsignup');;
+                window.location.href = Flask.url_for('loginsignup');
             }
             username = $.cookie("username");
             getUserLocation();
@@ -63,8 +63,8 @@ $(document).ready(function() {
                 list += '<li class="list-group-item"><div class="events-list-item">' +
                             '<div class="event-title">' + eventsList[i].title + '</div>' +
                             '<div class="btn-group" role="group">' +
-                                '<button class="btn btn-primary btn-sm follow" id="' + eventsList[i].eventId + '">Follow</button>' +
-                                '<button class="btn btn-warning btn-sm" id="' + eventsList[i].eventId + '">Share</button>' +
+                                '<button class="btn btn-primary btn-sm detail" id="' + eventsList[i].eventId + '">Detail</button>' +
+                                '<button class="btn btn-success btn-sm follow" id="' + eventsList[i].eventId + '">Follow</button>' +
                             '</div>' +
                         '</div></li>';
 
@@ -75,6 +75,9 @@ $(document).ready(function() {
                 addInfoWindow(marker, eventsList[i]);
             }
             $('#sidebar').html(listHead + list + listTail);
+            $('.detail').click(function() {
+                Flask.url_for('event/' + $(this).attr('id'));
+            });
             $('.follow').click(function() {
                 followEvent($(this).attr('id'));
             });
@@ -98,7 +101,7 @@ $(document).ready(function() {
             $.ajax({
                 type: "GET",
                 crossDomain: true,
-                dataType: 'jsonp',
+                dataType: 'json',
                 url: serverUrl + "/searchEvent",
                 data: queryData
             }).done(function(data) {
