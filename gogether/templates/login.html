@@ -1,0 +1,43 @@
+{%- extends "base.html" -%}
+{%- block title -%} Login Page {%- endblock title -%}
+{%- block headcontent -%} {%- endblock headcontent -%}
+{%- block bodycontent -%}
+<div id="header" class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="#">Gogether</a>
+	</div>
+	<nav class="collapse navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+			<li>
+				<a href="/signup">
+					<span>Sign Up<span>
+				</a>
+			</li>
+		</ul>
+    </nav>
+</div>
+<div id="wrapper">
+	<div class="log-in-sign-up-wrapper">
+		<div class="log-in-sign-up-form-group">
+			<h1>Log In</h1>
+			<form>
+				<div class="form-group">
+					<label for="log-in-username">Username</label>
+					<input type="text" class="form-control" id="log-in-username" placeholder="Username">
+				</div>
+				<div class="form-group">
+					<label for="log-in-password">Password</label>
+					<input type="password" class="form-control" id="log-in-password" placeholder="Password">
+				</div>
+			</form>
+			<div class="form-group pull-right">
+				<button class="btn btn-primary" id="log-in-button">Log In</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+{%- endblock bodycontent -%}
+{%- block scripts -%}
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+{%- endblock scripts -%}

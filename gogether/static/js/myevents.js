@@ -55,17 +55,31 @@ $(document).ready(function() {
             $.ajax({
                 type: "GET",
                 url: serverUrl + "/findOrganizedEvent",
-                data: queryData
+                data: queryData,
+                dataType: "json"
             }).done(function(data) {
                 organizeList = data;
                 generateOrganizeList();
             }).fail(function() {
-                console.log(1);
+                console.log('fail');
             });
         }
 
         function getFollowedList() {
-
+            var queryData = {
+                "userName": username
+            };
+            $.ajax({
+                type: "GET",
+                url: serverUrl + "/findFollowedEvent",
+                data: queryData,
+                dataType: "json"
+            }).done(function(data) {
+                followList = data;
+                generateFollowList();
+            }).fail(function() {
+                console.log('fail');
+            });
         }
 
         function generateOrganizeList() {
