@@ -1,6 +1,8 @@
 $(document).ready(function() {
     (function() {
-        var serverUrl = "http://ec2-52-90-113-155.compute-1.amazonaws.com:8080";
+        // var serverUrl = "http://ec2-52-90-113-155.compute-1.amazonaws.com:8080";
+        var serverUrl = "http://129.236.234.206:8080";
+
         var map;
         var eventsList = [];
         var ne;
@@ -100,8 +102,6 @@ $(document).ready(function() {
             };
             $.ajax({
                 type: "GET",
-                crossDomain: true,
-                dataType: 'json',
                 url: serverUrl + "/searchEvent",
                 data: queryData
             }).done(function(data) {

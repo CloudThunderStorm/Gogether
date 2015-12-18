@@ -1,6 +1,7 @@
 $(document).ready(function() {
     (function() {
-        var serverUrl = "http://ec2-52-90-113-155.compute-1.amazonaws.com:8080";
+        // var serverUrl = "http://ec2-52-90-113-155.compute-1.amazonaws.com:8080";
+        var serverUrl = "http://129.236.234.206:8080";
         var map;
         var datetimepicker1 = $('#datetimepicker1');
         var datetimepicker2 = $('#datetimepicker2');
@@ -17,7 +18,7 @@ $(document).ready(function() {
 
         function initiate() {
             if ($.cookie("username") == undefined || $.cookie("username") == "") {
-                window.location.href = Flask.url_for('loginsignup');;
+                window.location.href = Flask.url_for('login');;
             }
             username = $.cookie("username");
             getUserLocation();
@@ -81,11 +82,6 @@ $(document).ready(function() {
         }
 
         $("#submit-button").click(function() {
-            // title = "a";
-            // category = "food";
-            // description = "b";
-            // startDate = 1231313233412;
-            // endDate = 1231313233433;
             if (getValidData()) {
                 createData = {
                     "title": title,

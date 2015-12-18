@@ -1,6 +1,7 @@
 $(document).ready(function() {
     (function() {
-        var serverUrl = "http://ec2-52-90-113-155.compute-1.amazonaws.com:8080";
+        // var serverUrl = "http://ec2-52-90-113-155.compute-1.amazonaws.com:8080";
+        var serverUrl = "http://129.236.234.206:8080";
         var map;
         var organizeList = [];
         var followList = [];
@@ -8,7 +9,7 @@ $(document).ready(function() {
 
         function initiate() {
             if ($.cookie("username") == undefined || $.cookie("username") == "") {
-                window.location.href = Flask.url_for('loginsignup');;
+                window.location.href = Flask.url_for('login');
             }
             username = $.cookie("username");
             getUserLocation();

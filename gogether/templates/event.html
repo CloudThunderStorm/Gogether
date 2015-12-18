@@ -14,13 +14,17 @@ Event Page
 <div id="wrapper">
     <div id="event-outter-wrapper">
         <div id="event-inner-wrapper">
-            <h1>Event</h1>
-            <br/>
-            {%- include "socialbar.html" -%}
+            <div value="{{eventId}}" id="event-id"></div>
+            <div id="title"></div>
+            <div id="organizer"></div>
+            <div id="description"></div>
+            <div id="map-canvas"></div>            
+            <div id="followers"></div>
         </div>
     </div>
 </div>
 {%- endblock bodycontent -%}
 
 {%- block scripts -%}
+<script src="{{ url_for('static', filename='js/event.js') }}"></script>
 {%- endblock scripts -%}
