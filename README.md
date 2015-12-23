@@ -27,5 +27,5 @@ iOS application is built with Swift programming.
 Facebook Graph API is the primary way to get data in and out of Facebook's platform. It's a low-level HTTP-based API that you can use to query data, post new stories, manage ads, upload photos and a variety of other tasks that an app might need to do.
 
 ### Style Guide
-Java: [Google Java Style](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html)
-JavaScript: [Google JavaScript Style Guide](https://google.github.io/styleguide/javascriptguide.xml)
+1. Java: [Google Java Style](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html)
+2. JavaScript: [Google JavaScript Style Guide](https://google.github.io/styleguide/javascriptguide.xml)
