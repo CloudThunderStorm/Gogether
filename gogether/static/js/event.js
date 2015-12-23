@@ -1,7 +1,7 @@
 $(document).ready(function() {
     (function() {
         // var serverUrl = "http://ec2-52-90-113-155.compute-1.amazonaws.com:8080";
-        var serverUrl = "http://129.236.234.206:8080";
+        var serverUrl = "http://129.236.234.56:8080";
         var username;
         var eventId;
         var eventInfo;

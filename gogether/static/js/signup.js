@@ -1,8 +1,8 @@
 $(document).ready(function() {
     (function() {
         $('#sign-up-button').click(function() {
-            // var serverUrl = "http://ec2-52-90-113-155.compute-1.amazonaws.com:8080";
-            var serverUrl = "http://129.236.234.206:8080";
+            var serverUrl = "http://ec2-52-90-113-155.compute-1.amazonaws.com:8080";
+            // var serverUrl = "http://129.236.234.56:8080";
             var uname = $('#sign-up-username').val();
             var upass = $('#sign-up-password').val();
             var urepass = $('#sign-up-re-password').val();

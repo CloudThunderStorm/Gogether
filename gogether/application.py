@@ -29,10 +29,10 @@ def create():
 def myevents():
     return render_template('myevents.html')
 
-@app.route('/event/<eventId>')
-@cross_origin()
-def event(eventId):
-    return render_template('event.html', eventId=eventId)
+# @app.route('/event/<eventId>')
+# @cross_origin()
+# def event(eventId):
+#     return render_template('event.html', eventId=eventId)
 
 @app.route('/login')
 @cross_origin()
