@@ -3,6 +3,13 @@
 ### Introduction
 Gogether is a cross platfom social events sharing Application. In this project, we developed a web application and an iOS application to allow users to find, create and manage events in our system. our back-end server continuously grasps social events from Facebook Graph APIs and manages the requests from Gogether users using RDS MySQL database. Both back-end server and HTTP server is deployed on AWS.
 
+Demo Video:
+
+1. [Web Application](https://www.youtube.com/watch?v=3gvp9P6meYQ)
+2. [iOS Application](https://www.youtube.com/watch?v=R_VXcYQ4HsM)
+
+Web Application URL: http://gogether-dev2.elasticbeanstalk.com/login
+
 ### Backend (backend)
 Our backend program consists of two main parts:
 
