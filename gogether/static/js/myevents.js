@@ -202,8 +202,12 @@ $(document).ready(function() {
                         type: "success",
                         timer: 2000
                     });
+                    for (var i in markers) {
+                        markers[i].setMap(null);
+                    }
+                    markers = {};
                     getOrganizedList();
-                    markers[id].setMap(null);
+                    getFollowedList();
                 } else {
                     swal({
                         title: "Failed",
@@ -232,8 +236,12 @@ $(document).ready(function() {
                         type: "success",
                         timer: 2000
                     });
+                    for (var i in markers) {
+                        markers[i].setMap(null);
+                    }
+                    markers = {};
                     getFollowedList();
-                    markers[id].setMap(null);
+                    getOrganizedList();
                 } else {
                     swal({
                         title: "Failed",
